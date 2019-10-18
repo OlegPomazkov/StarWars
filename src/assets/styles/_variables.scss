@@ -1,0 +1,68 @@
+/* ----------------  Colors ------------------ */
+$white: #ffffff;
+$black: #000000;
+$text_prim: #304762;
+$text_mid: #454860;
+$text_sec: #7f8fa4;
+$text_blue: #2f80ed;
+$text_red: #f33a3a;
+$text_light_green: #6fcf97;
+
+$link_blue: #5555ff;
+
+$back_main: #f4f7f8;
+$back_modal: rgba(44,62,80, 0.7);
+$back_table: #e5e5e5;
+$back_odd_row: rgba(225, 232, 238, 0.25);
+$back_table_button: rgba(225, 232, 238, 0.5);
+$back_footer: rgba(225, 232, 238, 0.8); /* #e1e8ee */
+$back_landing_label: rgba(208, 228, 255, 0.8);
+$back_sidebar: #1e3c6a;
+$back_avatar: #e2f5ea;
+$back_inner_block: rgba(225, 232, 238, 0.25);
+$back_status_pending: rgba(242, 201, 76, 0.25);
+$back_status_in_progress: #E2F5EA;
+$back_status_stopped: #FBDDDD;
+$back_status_completed: rgba(48, 71, 98, 0.25);
+$back_light_orange: #FFD37D;
+$back_light_blue: #D5E6FB;
+
+$border_prim: #e1e8ee;
+$border_sec: #bfc7d1;
+$border_blue: #296dec;
+$border_status_pending: #F2994A;
+$border_status_in_progress: #16D761;
+$border_status_stopped: #F33A3A;
+$border_status_completed: #304762;
+
+$shadow_main: rgba(119, 146, 178, 0.08);
+$shadow_main_hover: rgba(119, 146, 178, 0.2);
+$shadow_small_button: rgba(0, 0, 0, 0.05);
+$shadow_middle: rgba(0, 0, 0, 0.2);
+$shadow_active_row: rgba(176, 186, 197, 0.4);
+
+$icon_red: #f68136;
+
+$status_ok: #6fcf97;
+$status_not: #e34a21;
+$status_warn: #f2c94c;
+
+/* ----------------  Fonts  ------------------ */
+$title_xl: 32px;
+$title_large: 21px;
+$title_small: 16px;
+$title_xs: 15px;
+$text_postnormal: 14px;
+$text_normal: 13px;
+$text_prenormal: 12px;
+$text_xxs: 11px;
+$text_3xs: 10px;
+
+/* ----------------  Sizes  ------------------ */
+$height_base: 35px;
+
+/* ----------------  Screens  ---------------- */
+$screen_xxs: 568px;
+$screen_xs: 768px;
+$screen_small: 992px;
+$screen_large: 1200px;
