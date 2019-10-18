@@ -1,28 +1,38 @@
 <template>
   <div class="home">
-    HOME
+    <div class="home__title">
+      STAR WARS 
+    </div>
+
+    <div
+      class="home__link"
+      v-for="(item, k) in allViews"
+      :key="`home_link_${k}`"
+      @click="handleViewClicked(item)"
+    >
+      {{ item }}
+    </div>
   </div>
 </template>
 
 <script>
-// import Header from "@/components/Landing/Header";
-// import Landing from "@/components/Landing";
-// import Footer from "@/components/Footer";
-
-// import { mapGetters } from "vuex";
+import { mapGetters } from "vuex";
 
 export default {
   name: "home",
-  components: {
-  },
-  data() {
-    return {    };
-  },
   computed: {
+    ...mapGetters({
+      allViews: "allViews",
+    })
   },
   async created() {
+    this.$store.dispatch('setCurrentView', null)
   },
   methods: {
+    handleViewClicked(view) {
+      this.$store.dispatch('setCurrentView', view)
+      this.$router.push({name: view})
+    }
   }
 };
 </script>

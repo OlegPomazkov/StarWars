@@ -1,29 +1,28 @@
 <template>
-  <div class="home">
-    PEOPLE
-  </div>
+  <div class="people">
+    <data-page 
+      :dataList="people" 
+    />
+  </div>  
 </template>
 
 <script>
-// import Header from "@/components/Landing/Header";
-// import Landing from "@/components/Landing";
-// import Footer from "@/components/Footer";
+import DataPage from "@/components/DataPage";
 
-// import { mapGetters } from "vuex";
+import { mapGetters } from "vuex";
 
 export default {
-  name: "home",
+  name: "people",
   components: {
-  },
-  data() {
-    return {    };
+    DataPage
   },
   computed: {
+    ...mapGetters({
+      people: "people",
+    })
   },
-  created() {
-    this.$store.dispatch('getPeople')
-  },
-  methods: {
+  async created() {
+    await this.$store.dispatch('getPeople')
   }
 };
 </script>
