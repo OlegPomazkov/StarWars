@@ -1,18 +1,20 @@
 <template>
-  <div class="people">
-    <page-header />
+  <div class="data_page">
+    <page-header  class="data_page__header" />
     
     <list-component 
+       class="data_page__list"
       :list="dataList"
       @listItemClicked="handleListItemClicked" 
     />
 
-    <page-controls />
+    <page-controls  class="data_page__controls" />
 
     <details-component 
       v-if="isDetailsVisible"
+      class="data_page__details"
       :itemData="currentItem"
-      :dataConfig="{}"
+      :dataConfig="dataConfig"
       @closeDetails="handleCloseDetails"
     />
   </div>
@@ -36,7 +38,11 @@ export default {
       type: Array,
       required: true,
       default: ()=>[]
-    }
+    },
+    dataConfig: {
+      type: Array,
+      required: true
+    },
   },
   data() {
     return {
@@ -56,3 +62,21 @@ export default {
   }
 };
 </script>
+
+<style lang="scss">
+@import "@/assets/styles/variables.scss";
+
+.data_page {
+  position: relative;
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%;
+  padding-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  background: $back_prim;
+  overflow: auto;
+}
+</style>

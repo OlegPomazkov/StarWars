@@ -4,14 +4,14 @@
       :class="`controls__item ${previousPage === null? 'disabled':''}`"
       @click="handleControlClicked('prev')"
     >
-      &lt; PREV
+      &lt; Prev
     </div>
 
     <div
       :class="`controls__item ${nextPage === null? 'disabled':''}`"
       @click="handleControlClicked('next')"
     >
-      NEXT &gt; 
+      Next &gt; 
     </div>
   </div>
 </template>
@@ -61,13 +61,15 @@ export default {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: pink;
+    font-size: $text_xl;
+    color: $back_prim;
+    background-color: $blue;
     cursor: pointer;
     border-radius: 17.5px;
 
     &.disabled {
-     cursor: crosshair; 
-     opacity: 0.8;
+     cursor: not-allowed; 
+     opacity: 0.5;
     }
   }
 }

@@ -31,30 +31,27 @@ export default {
 <style scoped lang="scss">
 @import "@/assets/styles/variables.scss";
 
-.controls {
+.list {
+  box-sizing: border-box;
   width: 100%;
-  height: 35px;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
 
   &__item {
     box-sizing: border-box;
-    height: 100%;
-    width: 100px;
-    margin-left: 10px;
-    margin-right: 10px;
+    height: 25px;
+    width: 300px;
+    margin-left: auto;
+    margin-right: auto;
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: pink;
+    font-size: $text_l;
+    font-weight: normal;
+    color: $text_sec;
     cursor: pointer;
-    border-radius: 17.5px;
+    border-bottom: 1px solid $back_sec;
 
-    &.disabled {
-     cursor: crosshair; 
-     opacity: 0.8;
+    &:hover {
+      color: $text_prim;
     }
   }
 }
